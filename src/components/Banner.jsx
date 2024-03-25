@@ -3,11 +3,11 @@ import ArrowIcon from "../assests/reshot-icon-right-arrow-button-YAB8GEM7SD-c5f6
 import RightArrowIcon from "../assests/reshot-icon-right-arrow-UCA8NGYZDJ.svg";
 import { useNavigate } from "react-router-dom";
 
-const Banner = ({ content, route }) => {
+const Banner = ({  route }) => {
   const navigate = useNavigate();
   return (
     <div className="banner-container" onClick={() => navigate(route)}>
-      {route == "contact" ? (
+      {route === "contact" ? (
         <div className="contact">
           <p>
             Helping you Is our duty, Have any Quries, <span> Contact Us </span>
