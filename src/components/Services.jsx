@@ -3,22 +3,22 @@ import Model from "../assests/model.png";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const data = [
     {
       image: Model,
       title: "Shop",
-      to:"/shop"
+      to: "/shop",
     },
     {
       image: Model,
       title: "Bookings",
-      to:"/bookings"
+      to: "/bookings",
     },
     {
       image: Model,
       title: "Workshops",
-      to:"/courses"
+      to: "/courses",
     },
   ];
   return (
@@ -33,14 +33,17 @@ const Services = () => {
         </p>
       </div>
       <div className="content">
-        {data.map((item,index) => {
-          const { image, title,to } = item;
+        {data.map((item, index) => {
+          const { image, title, to } = item;
           return (
             <div key={index} className="service-container">
+              <div className="item"></div>
               <div className="img-container">
                 <img src={image} alt="" />
               </div>
-              <button className="title" onClick={()=>navigate(to)}>{title}</button>
+              <button className="title" onClick={() => navigate(to)}>
+                {title}
+              </button>
             </div>
           );
         })}
