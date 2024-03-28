@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LOGO from "../assests/logo.png";
+import LocationSelector from "./LocationSelector";
+
 
 const Navbar = () => {
   return (
@@ -15,6 +17,9 @@ const Navbar = () => {
           <Link to="/bookings">Bookings</Link>
           <Link to="/courses">WorkShops</Link>
           <Link to="/contact">Contact Us</Link>
+        </div>
+        <div className="location">
+        <LocationSelector/>
         </div>
       </div>
     </>

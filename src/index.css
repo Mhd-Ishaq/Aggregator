@@ -88,11 +88,16 @@ button:hover {
 .navbar {
   background-size: cover;
   background-repeat: no-repeat;
-  position: sticky;
+  position: relative;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
 }
 .container {
   width: 70%;
-  padding-left: 4rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -128,7 +133,7 @@ button:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.95;
+  /* opacity: 0.95; */
 }
 
 .section-1 .intro {
@@ -538,6 +543,83 @@ footer p {
   justify-content: flex-end;
 }
 
+/* loaction fetching  */
+
+.modal {
+  display: block;
+  width: 60%;
+  position: absolute;
+  top: 90%;
+  left: auto; /* Set to auto to allow right positioning */
+  right: 20%; /* Adjust the right offset as needed */
+  padding: 1rem;
+  text-align: left;
+  z-index: 100;
+  margin: 0 auto; /* Center horizontally */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-selector .heading {
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 400;
+  border: 0.5px solid var(--orange);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.location-selector .heading:hover {
+  color: black;
+  font-weight: 600;
+  font-weight: 1.5rem;
+}
+.modal-content input {
+  width: 98%;
+}
+.modal-content .detect-container {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: 2rem;
+}
+.modal-content .detect {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  cursor: pointer;
+  color: var(--orange);
+}
+
+.modal-content .detect img {
+  padding-right: 1rem;
+}
+
+.modal-content .cities {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.location-selector ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.location-selector ul li {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+.location-selector ul li:hover {
+  background-color: var(--blue);
+}
+
 @media only screen and (max-width: 1112px) {
   .favorite-list {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -548,9 +630,6 @@ footer p {
   html {
     font-size: 16px;
   }
-  .container {
-    width: 80%;
-  }
   .section-1 .intro {
     width: 90%;
     margin: auto;
@@ -558,7 +637,13 @@ footer p {
   .section-1 .intro-img {
     display: none;
   }
-
+  .navbar {
+    width: 100%;
+    padding: 0;
+  }
+  .container {
+    width: 80%;
+  }
   .services {
     width: 90%;
     margin: auto;
@@ -638,6 +723,28 @@ footer p {
   }
   .mobile .mobile-icon img {
     width: 80%;
+  }
+  .modal {
+    display: block;
+    width: 90%;
+    position: absolute;
+    top: 78%;
+    left: auto;
+    right: 3%;
+    text-align: left;
+    z-index: 100;
+    margin: 0 auto;
+  }
+  .modal-content h3 {
+    font-size: 1.5rem;
+  }
+  .location-selector .heading {
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+  .modal-content input {
+    width: 90%;
   }
   .slidebar-container {
     display: block;

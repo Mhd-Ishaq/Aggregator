@@ -6,6 +6,7 @@ import HAM from "../assests/icons8-hamburger-menu (1).svg";
 import FACEBOOk from "../assests/icon-facebook.svg";
 import INSTA from "../assests/icon-instagram.svg";
 import LOGO from "../assests/logo.png";
+import LocationSelector from "./LocationSelector";
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,7 @@ const SideBar = () => {
               <Link to="/bookings">Bookings</Link>
               <Link to="/courses">WorkShops</Link>
               <Link to="/contact">Contact Us</Link>
+              <LocationSelector/>
             </div>
             <div className="bottom">
               <Link to="">
