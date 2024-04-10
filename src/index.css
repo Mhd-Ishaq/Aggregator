@@ -709,13 +709,13 @@ span {
 .prev-button {
   left: 10px;
   color: black;
-  z-index: 100;
+  z-index: 10;
 }
 
 .next-button {
   right: 10px;
   color: black;
-  z-index: 100;
+  z-index: 10;
 }
 
 /* Responsive styles */
@@ -1078,14 +1078,15 @@ span {
   }
 
   .carousel-container {
-    width: 100%;
     border-radius: 2rem;
-    margin-left: 2rem;
+    margin: auto;
+    width: 98%;
+    height: 30vh;
   }
 
   .slide {
     position: relative;
-    height: 40vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1097,10 +1098,11 @@ span {
 
   .slide img {
     width: 45%;
+    height: 32.5vh;
   }
   .slide-content {
     width: 50%;
-    padding-left: 1rem;
+    padding:  0 5rem 0 1rem;
     text-align: left;
   }
   .slide-content h2 {
@@ -1227,25 +1229,28 @@ span {
   }
   .specific-product-container {
     width: 90%;
+    height: 20vh;
+    margin: auto;
   }
   .products-container .content .container {
-    max-width: 250px;
-    min-width: 250px;
+    max-width: 150px;
+    min-width: 150px;
     justify-content: center;
     margin-right: 0;
     margin-left: 1rem;
   }
 
   .products-container .content .container .img-container {
-    width: 250px;
-    height: 200px;
+    width: 150px;
+    height: 130px;
   }
-  .products-container {
+  /* .products-container {
     width: 100%;
-  }
+  } */
   .products-container .content .container {
     margin-right: 0;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
+   
   }
   .small-image-container {
     width: 100px; /* Adjust according to your design */
