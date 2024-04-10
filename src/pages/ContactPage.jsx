@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import SideBar from "../components/SideBar";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -32,96 +30,92 @@ const ContactPage = () => {
 
   const { name, email, subject, number, message } = formData;
   return (
-    <>
-      <Navbar />
-      <SideBar />
-      <div>
-        <main className="form-container">
-          <h1>Contact Us</h1>
-          <p>Have any questions? Drop a message</p>
+    <div>
+      <main className="form-container">
+        <h1>Contact Us</h1>
+        <p>Have any questions? Drop a message</p>
 
-          <form name="contact" onSubmit={handleSubmit}>
-            <div className="row">
-              <div className="col">
-                <label htmlFor="name">Full Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  value={name}
-                  onChange={handleChange}
-                  placeholder="Enter your Full Name"
-                  name="name"
-                  required
-                  minLength="8"
-                  maxLength="16"
-                />
-              </div>
-              <div className="col">
-                <label htmlFor="email">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={handleChange}
-                  placeholder="Enter Email Address"
-                  name="email"
-                  required
-                  minLength="8"
-                  maxLength="24"
-                />
-              </div>
+        <form name="contact" onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col">
+              <label htmlFor="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={handleChange}
+                placeholder="Enter your Full Name"
+                name="name"
+                required
+                minLength="8"
+                maxLength="16"
+              />
             </div>
-            <div className="row">
-              <div className="col">
-                <label htmlFor="subject">Subject</label>
-                <input
-                  type="text"
-                  value={subject}
-                  onChange={handleChange}
-                  id="subject"
-                  placeholder="Enter Subject"
-                  name="subject"
-                  required
-                  minLength="15"
-                  maxLength="50"
-                />
-              </div>
-              <div className="col">
-                <label htmlFor="mobile">Contact Number</label>
-                <input
-                  type="tel"
-                  id="mobile"
-                  value={number}
-                  onChange={handleChange}
-                  placeholder="Enter Mobile Number"
-                  name="number"
-                  required
-                  minLength="10"
-                  maxLength="10"
-                />
-              </div>
+            <div className="col">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={handleChange}
+                placeholder="Enter Email Address"
+                name="email"
+                required
+                minLength="8"
+                maxLength="24"
+              />
             </div>
-            <div className="row">
-              <div className="col">
-                <label htmlFor="message">Your Message</label>
-                <textarea
-                  id="message"
-                  value={message}
-                  onChange={handleChange}
-                  placeholder="Enter your issue/message"
-                  rows="3"
-                  name="message"
-                  required
-                  minLength="15"
-                  maxLength="300"
-                ></textarea>
-              </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                value={subject}
+                onChange={handleChange}
+                id="subject"
+                placeholder="Enter Subject"
+                name="subject"
+                required
+                minLength="15"
+                maxLength="50"
+              />
             </div>
-            <button className="btn">Submit</button>
-          </form>
-        </main>
-      </div>
-    </>
+            <div className="col">
+              <label htmlFor="mobile">Contact Number</label>
+              <input
+                type="tel"
+                id="mobile"
+                value={number}
+                onChange={handleChange}
+                placeholder="Enter Mobile Number"
+                name="number"
+                required
+                minLength="10"
+                maxLength="10"
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <label htmlFor="message">Your Message</label>
+              <textarea
+                id="message"
+                value={message}
+                onChange={handleChange}
+                placeholder="Enter your issue/message"
+                rows="3"
+                name="message"
+                required
+                minLength="15"
+                maxLength="300"
+              ></textarea>
+            </div>
+          </div>
+          <button className="btn">Submit</button>
+        </form>
+      </main>
+    </div>
   );
 };
 

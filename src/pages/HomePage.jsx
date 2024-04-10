@@ -1,19 +1,16 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import DetailedServices from "../components/DetailedServices ";
 import FavoriteLIst from "../components/FavoriteLIst";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-import SideBar from "../components/SideBar";
+
 import Banner from "../components/Banner";
 
 const HomePage = () => {
   const navigate = useNavigate();
   return (
     <div className="main-container">
-      <Navbar />
-      <SideBar />
       <div>
         <div className="section-1">
           <div className="intro">

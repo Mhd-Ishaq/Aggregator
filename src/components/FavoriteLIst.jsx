@@ -8,7 +8,7 @@ const FavoriteLIst = () => {
 const navigate = useNavigate();
 const handleClick = (id) =>{
 console.log(data[id]);
-navigate(`/shop/${id}`)
+navigate(`/products/${id}`)
 
 
 }
