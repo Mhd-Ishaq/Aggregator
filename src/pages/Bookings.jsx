@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import SelectComponent from "../components/Select";
-import image1 from '../assests/icon-phone.svg';
-import image2 from '../assests/icon-facebook.svg';
-import image3 from '../assests/location.png';
-import Carousel from "../components/carousel";
+// import image1 from '../assests/icon-phone.svg';
+// import image2 from '../assests/icon-facebook.svg';
+// import image3 from '../assests/location.png';
+// import Carousel from "../components/carousel";
 
 const Bookings = () => {
   const options = [
@@ -18,7 +18,7 @@ const Bookings = () => {
     setSelectedOption(value);
   };
 
-  const images = [image1, image2, image3];
+  // const images = [image1, image2, image3];
   return (
     <div className="main-container">
       <div className="intro-container">

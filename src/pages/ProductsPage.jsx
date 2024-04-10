@@ -6,7 +6,7 @@ import { data, data_1 } from "../mockdata/Data";
 import Products from "../components/Products";
 import image_2 from "../assests/product-1.jpg";
 import image_3 from "../assests/product-2.jpg";
-import image_4 from "../assests/product-3.jpg";
+// import image_4 from "../assests/product-3.jpg";
 
 const ProductsPage = () => {
   const navigate = useNavigate();

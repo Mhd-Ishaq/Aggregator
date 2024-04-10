@@ -8,7 +8,7 @@ import image_4 from "../assests/product-3.jpg";
 const LargeImageContainer = ({ selectedImage }) => {
   return (
     <div className="large-image-container">
-      <img src={selectedImage} alt="Large Image" />
+      <img src={selectedImage} alt="product" />
     </div>
   );
 };
@@ -17,7 +17,7 @@ const LargeImageContainer = ({ selectedImage }) => {
 const SmallImageContainer = ({ image, onClick }) => {
   return (
     <div className="small-image-container" onClick={() => onClick(image)}>
-      <img src={image} alt="Small Image" />
+      <img src={image} alt="product" />
     </div>
   );
 };

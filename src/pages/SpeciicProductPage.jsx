@@ -1,10 +1,10 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import Model from "../assests/model.png";
 import ImageGallery from "../components/ImageGallery";
 
 const SpeciicProductPage = () => {
-  let { id } = useParams();
+  // let { id } = useParams();
   const data = [
     {
       image: Model,
