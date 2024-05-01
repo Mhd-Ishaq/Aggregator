@@ -1,9 +1,10 @@
 import React from "react";
 import Services from "../components/Services";
 import DetailedServices from "../components/DetailedServices ";
-import FavoriteLIst from "../components/FavoriteLIst";
+import FavoriteList from "../components/FavoriteList";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import { data } from "../mockdata/Data";
 
 import Banner from "../components/Banner";
 
@@ -36,7 +37,8 @@ const HomePage = () => {
       <Banner route="discounts" />
       <DetailedServices />
       <Banner route="contact" />
-      <FavoriteLIst />
+      <h1 style={{textAlign:"center"}}>Our Best Products</h1>
+      <FavoriteList header={"Our Best Products"} data={data} specific={true} />
       <Footer />
     </div>
   );

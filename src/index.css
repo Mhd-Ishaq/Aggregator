@@ -325,26 +325,26 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(400px, 1fr)
+    minmax(350px, 1fr)
   ); /* Adjust the minimum width as needed */
-  grid-gap: 1.5rem; /* Adjust the gap between items */
+  grid-gap: 1rem; /* Adjust the gap between items */
 }
 
 .favorite-item {
   padding: 1.5rem;
   text-align: center;
+  width: 100%;
 }
 
 .card {
-  min-width: 100%;
-
+  width: 100%;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
-  border-radius: 2rem;
+  border-radius: 1rem;
   text-align: left;
 }
 .img-container {
@@ -352,10 +352,11 @@ button:hover {
 }
 .card .img-container img {
   width: 100%;
-  border-radius: 2rem;
+  height: 25vh;
+  border-radius: 1rem;
 }
 .card .details-cointainer {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .card .details {
   display: flex;
@@ -718,21 +719,27 @@ span {
   z-index: 10;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .slide {
-    flex-direction: column;
-  }
-
-  .slide-image {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .slide-content {
-    padding: 10px;
-    text-align: center;
-  }
+/* /Sort component Stylings  */
+.sort-container {
+  display: flex;
+  width: 82%;
+  margin: auto;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.sort-container .item {
+  margin-right: 4rem;
+  padding-bottom: 2rem;
+  color: black;
+  cursor: pointer;
+}
+.sort-container .item:hover {
+  color: var(--orange);
+  /* font-size: 1.3rem; */
+}
+.sort-container .item.clicked {
+  color: var(--orange);
 }
 
 /* bookings page */
@@ -935,13 +942,211 @@ span {
   border-radius: 0.5rem;
 }
 
+/* Makeup Page Styles*/
+.specificMakeupPage-container .details-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* border: 2px solid red; */
+}
+.specificMakeupPage-container .details-container .left-container {
+  width: 55%;
+  margin-right: 2%;
+  /* border: 2px solid red; */
+  /* position: relative; */
+}
+.specificMakeupPage-container
+  .details-container
+  .left-container
+  .img-container {
+  width: 100%;
+  height: 450px;
+  border: 1px solid grey;
+  overflow: hidden;
+  /* border-bottom: none; */
+}
+.specificMakeupPage-container
+  .details-container
+  .left-container
+  .img-container
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
 
-/* filters styles  */
+.specificMakeupPage-container .details-container .left-container .user-details {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  /* border: 2px solid red; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  /* position: absolute;
+  top: 90%;
+  left: 5%; */
+  /* z-index: 1000; */
+  /* margin-top: -40px; */
+  /* bo */
+}
+.specificMakeupPage-container
+  .details-container
+  .left-container
+  .user-details
+  .icon-data,
+.specificMakeupPage-container .details-container .right-container .icon-data {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0;
+}
+.specificMakeupPage-container
+  .details-container
+  .left-container
+  .user-details
+  .icon-data
+  img,
+.specificMakeupPage-container
+  .details-container
+  .right-container
+  .icon-data
+  img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
+.specificMakeupPage-container
+  .details-container
+  .left-container
+  .user-details
+  .rating,
+.specificMakeupPage-container .right-container .rating {
+  background-color: green;
+  color: white;
+  padding: 10px 5px;
+  border-radius: 0.25rem;
+  margin: 0;
+  text-align: center;
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+}
+
+.specificMakeupPage-container
+  .details-container
+  .left-container
+  .user-details
+  .reviews {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.specificMakeupPage-container .details-container .right-container {
+  width: 40%;
+  padding: 2rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+}
+.specificMakeupPage-container
+  .details-container
+  .right-container
+  .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding-bottom: 1rem;
+}
+.specificMakeupPage-container .details-container .right-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.specificMakeupPage-container .details-container .right-container img {
+  width: 20px;
+  margin: 0 5px;
+}
+.specificMakeupPage-container .right-container .buttons-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.right-container button {
+  margin: 0;
+  margin-right: 20px;
+  background-color: var(--light-blue);
+  color: white;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: none;
+}
+.right-container .green-btn {
+  background-color: green;
+}
+.right-container .Price {
+  color: var(--orange);
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid grey;
+  font-size: 1.5rem;
+}
+.agent-details {
+  width: 70%;
+  /* margin: auto; */
+  text-align: center;
+  margin: 2rem auto;
+}
+.agent-details .img-container {
+  width: 50%;
+  margin: auto;
+}
+.agent-details h1 {
+  margin: 2rem 0;
+}
+.agent-details p {
+  width: 70%;
+  margin: 1rem auto;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .slide {
+    flex-direction: column;
+  }
+
+  .slide-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .slide-content {
+    padding: 10px;
+    text-align: center;
+  }
+}
 
 @media only screen and (max-width: 1112px) {
-  .favorite-list {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  }
+  /* .favorite-list {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+  } */
+  /* .card {
+    width: 300px;
+  } */
   .products-container .content .container {
     max-width: 250px;
     min-width: 250px;
@@ -950,6 +1155,22 @@ span {
   .products-container .content .container .img-container {
     width: 250px;
     height: 250px;
+  }
+  .specificMakeupPage-container .details-container {
+    width: 80%;
+  }
+  .specificMakeupPage-container .details-container .user-details {
+    width: 90%;
+  }
+  .agent-details {
+    width: 70%;
+  }
+  .agent-details .img-container {
+    width: 70%;
+    margin: auto;
+  }
+  .agent-details p {
+    width: 80%;
   }
 }
 
@@ -1011,16 +1232,23 @@ span {
   }
 
   .single-product-container .details {
-    padding: 5% 0 ;
+    padding: 5% 0;
     text-align: left;
   }
 
   .section-2 p {
     max-width: 70%;
   }
-  .favorite-list {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  .favorite-container {
+    width: 90%;
+    margin: auto;
   }
+  .favorite-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  /* .card {
+    width: 300px;
+  } */
   .services .content .service-container {
     min-width: 200px;
     max-width: 200px;
@@ -1045,7 +1273,30 @@ span {
   .buttons-container button {
     margin-left: 1rem;
   }
+  .specificMakeupPage-container .details-container {
+    width: 70%;
+    flex-direction: column;
+  }
+  .specificMakeupPage-container .details-container .left-container,
+  .specificMakeupPage-container .details-container .right-container {
+    width: 80%;
+    margin: 2rem auto;
+
+    /* border: 2px solid red; */
+    /* position: relative; */
+  }
+  .agent-details {
+    width: 80%;
+  }
+  .agent-details img {
+    width: 80%;
+    margin: auto;
+  }
+  /* .agent-details  p {
+    width: 90%;
+  } */
 }
+
 @media only screen and (max-width: 768px) {
   html {
     font-size: 14px;
@@ -1102,7 +1353,7 @@ span {
   }
   .slide-content {
     width: 50%;
-    padding:  0 5rem 0 1rem;
+    padding: 0 5rem 0 1rem;
     text-align: left;
   }
   .slide-content h2 {
@@ -1110,6 +1361,16 @@ span {
   }
   .slide {
     flex-direction: row;
+  }
+  .agent-details {
+    width: 90%;
+  }
+  .agent-details img {
+    width: 100%;
+    margin: auto;
+  }
+  .specificMakeupPage-container .details-container .left-container {
+    width: 90%;
   }
 }
 
@@ -1250,15 +1511,46 @@ span {
   .products-container .content .container {
     margin-right: 0;
     /* margin-left: 1rem; */
-   
   }
   .small-image-container {
     width: 100px; /* Adjust according to your design */
     height: 80px; /* Adjust according to your design */
   }
-
+  .favorite-list {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .card {
+    width: 350px;
+  }
+  .specificMakeupPage-container .details-container .left-container {
+    width: 95%;
+  }
+  .specificMakeupPage-container .details-container{
+    width: 85%;
+  }
+  .specificMakeupPage-container
+    .details-container
+    .left-container
+    .user-details {
+    width: 85%;
+  }
+  .buttons-container button{
+    margin-left: 0;
+  }
+  .agent-details {
+    width: 90%;
 }
+  .agent-details .img-container{
+    width: 90%;
+  }
 
+  .specificMakeupPage-container
+    .details-container
+    .left-container
+    .img-container {
+    height: 350px;
+  }
+}
 
 @media only screen and (max-width: 360px) {
   html {

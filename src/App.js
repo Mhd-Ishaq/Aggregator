@@ -11,6 +11,8 @@ import ContactPage from "./pages/ContactPage";
 import Navbar from "./components/Navbar";
 import SideBar from "./components/SideBar";
 import AllProductsPage from "./pages/AllProductsPage";
+import MakeupPage from "./pages/MakeupPage";
+import SpecificMakeupPage from "./pages/SpecificMakeupPage";
 
 const App = () => {
   return (
@@ -21,10 +23,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="shop" element={<ProductsPage />} />
-          <Route path="products/:id" element={<SpeciicProductPage />} />{" "}
+          <Route path="products/:id" element={<SpeciicProductPage />} />
           <Route path="products" element={<AllProductsPage />} />
           <Route path="about" element={<About />} />
           <Route path="bookings" element={<Bookings />} />
+          <Route path="makeup" element={<MakeupPage />} />
+          <Route path="makeup/:id" element={<SpecificMakeupPage/>} />
           <Route path="courses" element={<Courses />} />
           <Route path="discounts" element={<DiscountsPage />} />
           <Route path="contact" element={<ContactPage />} />

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import SelectComponent from "../components/Select";
-// import image1 from '../assests/icon-phone.svg';
-// import image2 from '../assests/icon-facebook.svg';
-// import image3 from '../assests/location.png';
-// import Carousel from "../components/carousel";
+import { Bridal, Family } from "../mockdata/Data";
+import { useNavigate } from "react-router-dom";
+import FavoriteList from "../components/FavoriteList";
 
 const Bookings = () => {
   const options = [
@@ -17,9 +16,13 @@ const Bookings = () => {
   const handleSelectChange = (value) => {
     setSelectedOption(value);
   };
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/makeup`);
+  };
 
-  // const images = [image1, image2, image3];
   return (
+    
     <div className="main-container">
       <div className="intro-container">
         <h1>Find your way</h1>
@@ -40,7 +43,8 @@ const Bookings = () => {
         </div>
         <p className="make-up-links">Popular Searches Bridal Makeup | Family Makeup </p>
       </div>
-      {/* <Carousel images={images} /> */}
+      <FavoriteList header={"Bridal Makeup"} data={Bridal} handleClick={handleClick}  />
+      <FavoriteList header={"Family Makeup"} data={Family} handleClick={handleClick}  />
     </div>
   );
 };
