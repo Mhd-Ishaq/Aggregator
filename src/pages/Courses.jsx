@@ -17,7 +17,7 @@ const Courses = () => {
     {
       imageUrl: image_2,
       title: "Live WorkShops",
-      description: "Description for Slide 1",
+      description: "Description for first Slide",
     },
     {
       imageUrl: image,
