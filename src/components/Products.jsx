@@ -8,6 +8,7 @@ const Products = ({
   handleClick,
   specific = false,
   sortedBy = "",
+  isworkShop=false
 }) => {
   
   const sortProducts = (a, b) => {
@@ -45,7 +46,7 @@ const Products = ({
       </div>
       <div className="content">
         {sortedProducts.map((item, index) => (
-          <ProductCard item={item} index={index} handleClick={handleClick} />
+          <ProductCard item={item} index={index} handleClick={handleClick} isworkShop={isworkShop} />
         ))}
       </div>
     </div>

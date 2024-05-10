@@ -13,6 +13,8 @@ import SideBar from "./components/SideBar";
 import AllProductsPage from "./pages/AllProductsPage";
 import MakeupPage from "./pages/MakeupPage";
 import SpecificMakeupPage from "./pages/SpecificMakeupPage";
+import WorkshopsPage from "./pages/WorkshopsPage";
+import SpecificWorkshopPage from "./pages/SpecificWorkshopPage";
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
           <Route path="makeup" element={<MakeupPage />} />
           <Route path="makeup/:id" element={<SpecificMakeupPage/>} />
           <Route path="courses" element={<Courses />} />
+          <Route path="workshops" element={<WorkshopsPage />} />
+          <Route path="workshops/:id" element={<SpecificWorkshopPage/>} />
           <Route path="discounts" element={<DiscountsPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Routes>

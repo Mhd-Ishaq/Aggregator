@@ -7,6 +7,7 @@
   --blue: #a2d2ff;
   --light-blue: #1c8ff3;
   --orange: rgb(202, 99, 57);
+  --orange-light: rgb(218, 161, 139);
 }
 
 *,
@@ -720,26 +721,83 @@ span {
 }
 
 /* /Sort component Stylings  */
-.sort-container {
+
+.search-sort {
   display: flex;
   width: 82%;
   margin: auto;
-  justify-content: flex-start;
-  align-items: center;
   border-bottom: 1px solid grey;
-}
-.sort-container .item {
-  margin-right: 4rem;
+  /* justify-content: space-between; */
+  gap: 4rem;
   padding-bottom: 2rem;
+  align-items: center;
+}
+.sort-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 3;
+}
+
+.sort-container .item {
+  display: flex;
+  justify-content: space-between;
   color: black;
   cursor: pointer;
+  width: fit-content;
+  margin-right: 1rem;
+}
+
+.search {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+.search-input {
+  padding-left: 50px; /* Adjust this value to fit the size of your search icon */
+  background-image: url("./assests/search-interface-symbol.png");
+  background-size: 20px; /* Adjust this value to fit the size of your search icon */
+  background-repeat: no-repeat;
+  background-position: 10px center; /* Adjust this value to position the icon */
+  border: 1px solid #ccc; /* Add border styles as needed */
+  border-radius: 5px; /* Add border-radius styles as needed */
+  width: 250px; /* Add width styles as needed */
+  height: 30px; /* Add height styles as needed */
+}
+.search input {
+  display: block;
+  max-width: 90%;
 }
 .sort-container .item:hover {
   color: var(--orange);
   /* font-size: 1.3rem; */
 }
+.menu {
+  display: none;
+  position: relative;
+  cursor: pointer;
+}
 .sort-container .item.clicked {
   color: var(--orange);
+}
+/* menu */
+.menu-wrapper {
+  width: 200px;
+  height: 200px;
+  overflow: scroll;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(13, 125, 211, 0.15) 0px 2px 6px 2px;
+  background-color: white;
+  padding: 12px;
+}
+.menu-wrapper .menu-item {
+  padding: 1rem 0;
+}
+.menu-wrapper .menu-item:hover {
+  color: orange;
 }
 
 /* bookings page */
@@ -849,9 +907,14 @@ span {
 .products-container .content .container .details-cointainer h4 {
   padding-top: 1rem;
 }
+.products-container .content .container .details-cointainer .ratingss {
+  display: flex;
+  align-items: center;
+}
 .products-container .content .container .details-cointainer .ratings img {
-  width: 15px;
+  width: 18px;
   padding-top: 1rem;
+  padding-right: 0.5rem;
 }
 
 .specific-product-container {
@@ -1122,6 +1185,58 @@ span {
   line-height: 1.5;
 }
 
+/* workshop style */
+.workshop {
+  width: 80%;
+  margin: auto;
+}
+.workshop-container {
+  /* width: 80%;
+  margin: auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  min-height: 50vh;
+  background-color: var(--orange-light);
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.workshop-container .left-container {
+  width: 40%;
+}
+.workshop-container .left-container .img-container {
+  width: 75%;
+  margin: auto;
+}
+.workshop-container .left-container .img-container img {
+  width: 100%;
+}
+.workshop-container .right-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.workshop-container .right-container .item {
+  padding: 1.5rem 0;
+}
+.workshop-container .right-container button {
+  width: 30%;
+  border-radius: 1.25rem;
+  margin-top: 1rem;
+}
+.workshop .description {
+  text-align: left;
+  margin: 2.5rem 0;
+}
+.workshop .description p {
+  margin: 2rem 0;
+  line-height: 2;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .slide {
@@ -1281,9 +1396,6 @@ span {
   .specificMakeupPage-container .details-container .right-container {
     width: 80%;
     margin: 2rem auto;
-
-    /* border: 2px solid red; */
-    /* position: relative; */
   }
   .agent-details {
     width: 80%;
@@ -1292,9 +1404,41 @@ span {
     width: 80%;
     margin: auto;
   }
-  /* .agent-details  p {
-    width: 90%;
-  } */
+  .sort-container {
+    display: none;
+  }
+  .search-sort {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .search {
+    flex: 0 1 80%;
+  }
+  .search input {
+    width: 100%;
+  }
+
+  .menu {
+    display: block;
+  }
+  .menu-icon img {
+    width: 100%;
+  }
+  .products-container .content {
+    justify-content: center;
+  }
+  .workshop-container {
+    padding: 1rem 0;
+      }
+  .workshop-container {
+    flex-direction: column;
+  }
+  .workshop-container .left-container {
+    width: 60%;
+  }
+  .workshop-container .right-container {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1371,6 +1515,13 @@ span {
   }
   .specificMakeupPage-container .details-container .left-container {
     width: 90%;
+  }
+
+  .workshop-container .left-container {
+    width: 80%;
+  }
+  .workshop-container .right-container {
+    width: 80%;
   }
 }
 
@@ -1502,7 +1653,7 @@ span {
   }
 
   .products-container .content .container .img-container {
-    width: 150px;
+    width: 145px;
     height: 130px;
   }
   /* .products-container {
@@ -1525,7 +1676,7 @@ span {
   .specificMakeupPage-container .details-container .left-container {
     width: 95%;
   }
-  .specificMakeupPage-container .details-container{
+  .specificMakeupPage-container .details-container {
     width: 85%;
   }
   .specificMakeupPage-container
@@ -1534,13 +1685,13 @@ span {
     .user-details {
     width: 85%;
   }
-  .buttons-container button{
+  .buttons-container button {
     margin-left: 0;
   }
   .agent-details {
     width: 90%;
-}
-  .agent-details .img-container{
+  }
+  .agent-details .img-container {
     width: 90%;
   }
 
@@ -1549,6 +1700,17 @@ span {
     .left-container
     .img-container {
     height: 350px;
+  }
+  .products-container .content {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .workshop-container .left-container {
+    width: 90%;
+  }
+  .workshop-container .right-container {
+    width: 90%;
   }
 }
 
